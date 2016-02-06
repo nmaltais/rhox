@@ -1,0 +1,13 @@
+body {
+  text-align: center;
+}
+html,body,input{
+  width: 100%;
+  text-align: center;
+  font-size: 500px;
+}
+#container {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}

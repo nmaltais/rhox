@@ -1,0 +1,5 @@
+applications:
+- name: fau-hackathon
+  memory: 128M
+  services:
+   - fau-iot

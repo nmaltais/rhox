@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Hello FAU from IBM</title>
+         <style>
+         body {
+           text-align: center;
+         }
+         html,body,input{
+           width: 100%;
+           text-align: center;
+           font-size: 200%;
+         }
+         #container {
+           width: 100%;
+           margin: 0 auto;
+           text-align: center;
+         }
+         </style>
+    </head>
+    <body>
+      <div id="container">
+        <h1>Let your light twitter {{light}}</h1>
+        <form action="/light/on" method="POST">
+            <input type="submit" value="Turn me on">
+        </form>
+        <form action="/light/off" method="POST">
+            <input type="submit" value="Turn me off">
+        </form>
+      </div>
+    </body>
+
+</html>
