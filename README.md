@@ -40,16 +40,47 @@ You can use this recipes to register your Pi to Bluemix.
 https://developer.ibm.com/iotfoundation/recipes/raspberry-pi/
 Remember to write down the following necessary information for connecting your code with Bluemix iotf later:
 
+```
 organization = ""
 deviceType = ""
 deviceId = ""
 authMethod = "token"
 authToken = ""
-
+```
+deviceId can be whatever you want, as long as it's unique inside your Bluemix org
 3. Run your client code
+You can either log-in to your Pi using ssh or VNC Viewer
+```
+ssh pi@your.pi.ip.address
+```
+create a directory for your the project, lets name it /opt/fau/iotf
+```
+mkdir /opt/fau/iotf
+```
+clone the code to your pi:
+
+```
+git clone https://github.com/dnguyenv/iot.git
+```
+Modify your the client.py to match your setting, then save it:
+```
+#####################################
+#FILL IN THESE DETAILS
+#####################################
+organization = ""
+deviceType = ""
+deviceId = ""
+authMethod = "token"
+authToken = "4kUN-)g0WI?0S+WgkM"
+```
+Now run the app:
+
+```
+python client.py
+```
 
 4. Deploy your server code to Bluemix
-
+Make sure you have a Bluemix ID upfront. 
 5. Try it out
 
 More instructions about how to work with Python iotf library can be found here:
