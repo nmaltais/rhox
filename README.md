@@ -8,7 +8,7 @@ Here is the architecture overview of the application:
 # Stuffs needed for building project
 ## Hardware:
 1. Raspberry Pi 2 / B+.
-2. USB wifi dongle.
+2. USB wifi dongle
 3. USB keyboard and mouse.
 4. HDMI monitor and cable.
 5. Micro USB power adapter (smartphone charger).
