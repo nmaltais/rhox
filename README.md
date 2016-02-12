@@ -34,7 +34,7 @@ Below is the detailed diagram as illustrates how to connect the parts together o
 - Format your SD or Micoro SD card being used for your Pi
 - Download Raspbian OS or NOOBS from Raspberry pi website and copy it over to your card
 https://www.raspberrypi.org/downloads/
-You may need a monitor and
+You may need a monitor and a keyboard for the first time installation. 
 2. Register you Pi to Bluemix
 You can use this recipes to register your Pi to Bluemix.
 https://developer.ibm.com/iotfoundation/recipes/raspberry-pi/
@@ -80,7 +80,7 @@ python client.py
 ```
 
 4. Deploy your server code to Bluemix
-Make sure you have a Bluemix ID upfront. 
+Make sure you have a Bluemix ID upfront.
 5. Try it out
 
 More instructions about how to work with Python iotf library can be found here:
