@@ -32,7 +32,8 @@ Below is the detailed diagram as illustrates how to connect the parts together o
 ![alt text](./images/circuit.jpg "Circuit wire up")
 
 ## Basic steps to setup the environment:
-1. Setup your Rapberry pi
+
+###Setup your Rapberry pi
 
 Follow this quick instruction to quickly install your Pi:
 
@@ -44,7 +45,7 @@ Once you have your Pi setup, you can either use the separate keyboard and monito
 
 If you have a laptop with a lot of tools you're comfortable with, just make sure your Pi and your laptop can connect together(eg: on same network) then you know your Pi ip address and can access and work with your Pi using your laptop through ssh or VNC viewer.
 
-2. Register your Pi to Bluemix
+### Register your Pi to Bluemix
 
 Assuming you have your Pi setup with internet connection using the wifi dongle in step 1.
 
@@ -97,7 +98,7 @@ Remember to record the authentication token displayed for later use since it is 
 ![alt text](./images/generate-apikey2.png "Create iotf service")
 
 
-3. Run your client code
+### Run your client code
 
 Assuming you've wired things up following the circuit diagram. Login to your Raspberry Pi, then do the following steps to run client component of the project:
 
@@ -145,7 +146,7 @@ If it's successfully started, you could see something similar to this:
 
 Now your Client side is connected to IBM IOTF on Bluemix and waiting for commands from Server side component.
 
-4. Deploy your server code to Bluemix
+### Deploy your server code to Bluemix
 
 You must have a Bluemix account already. We will use command line interface (CLI) to deploy our application (Server component) to Bluemix.
 
@@ -230,7 +231,7 @@ stack: cflinuxfs2
 buildpack: python 1.5.1
 ```
 
-5. Try it out
+### Try it out
 
 Use your smartphone which has internet connection, to access to
 
