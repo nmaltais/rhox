@@ -41,7 +41,7 @@ Close look at breadboard part:
 
 ![alt text](./images/wired-breadboard.jpg "Circuit wire up")
 
-Close look at relay part (I'm using 8 channels relay module and channel 8 is for controlling the appliance). You can connect any device to the power outlet strip to try, eg: a lamp, fan, etc. Remember, this power outlet is connected to your wall with high voltage so be careful. 
+Close look at relay part (I'm using 8 channels relay module and channel 8 is for controlling the appliance). You can connect any device to the power outlet strip to try, eg: a lamp, fan, etc. Remember, this power outlet is connected to your wall with high voltage so be careful.
 
 ![alt text](./images/wired-relay.jpg "Circuit wire up")
 
@@ -250,6 +250,10 @@ http://fau-lightup.mybluemix.net
 You now can send commands from your phone to turn on/off any device connected to the client side of the system.
 
 ![alt text](./images/run.png "Running app")
+
+=>
+
+![alt text](./images/run1.png "Running app")
 
 More instructions about how to work with Python iotf library can be found here:
 https://docs.internetofthings.ibmcloud.com/libraries/python.html
