@@ -103,12 +103,14 @@ Assuming you've wired things up following the circuit diagram. Login to your Ras
 Create a directory for your the project, lets name it /opt/fau/iotf
 
 ```
-mkdir -p /opt/fau/iotf
+sudo mkdir -p /opt/fau/iotf
 ```
 Git has been installed by default with your Raspbian so just use it to clone the code to your Pi:
 
 ```
-git clone https://github.com/dnguyenv/iot.git
+cd /opt/fau/iotf
+sudo git clone https://github.com/dnguyenv/iot.git
+cd iot
 ```
 Modify your the client.py to match your setting, then save it:
 
@@ -122,6 +124,13 @@ deviceId = ""
 authMethod = ""
 authToken = ""
 ```
+
+Install ibmiotf and other necessary libraries for Python on your Raspberry Pi:
+
+```
+sudo pip install ibmiotf
+```
+
 Now run the app:
 
 ```

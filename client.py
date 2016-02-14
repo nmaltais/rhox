@@ -49,7 +49,7 @@ print
 ######################################################
 #Update this section to match your environment setting
 ######################################################
-organization = "1qdfa9"
+organization = "1eaiiu"
 deviceType = "RaspberryPi"
 deviceId = "RaspberryPi-Lightup"
 authMethod = "token"
