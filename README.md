@@ -23,11 +23,11 @@ Here is the architecture overview of the application:
 ## Software:
 1. Raspbian OS
 2. Python
-3. CloudFoundry cli, Bluemix account (go to http://bluemix.net/ to register)
+3. CloudFoundry cli, Bluemix account (It's free, go to http://bluemix.net/ to register)
 
 ## Circuit wiring up:
 
-Below is the detailed diagram as illustrates how to connect the parts together on the breadboard and with the Pi. Make sure you wire things up before jumping to next steps.
+Below is the pictures that illustrate how to connect the parts together on the breadboard and with the Pi. Make sure you wire things up before jumping to next steps.
 
 All things together:
 
@@ -41,7 +41,7 @@ Close look at breadboard part:
 
 ![alt text](./images/wired-breadboard.jpg "Circuit wire up")
 
-Close look at relay part (I'm using 8 channels relay module and channel 8 is for controlling the appliance)
+Close look at relay part (I'm using 8 channels relay module and channel 8 is for controlling the appliance). You can connect any device to the power outlet strip to try, eg: a lamp, fan, etc. Remember, this power outlet is connected to your wall with high voltage so be careful. 
 
 ![alt text](./images/wired-relay.jpg "Circuit wire up")
 
@@ -63,11 +63,7 @@ If you have a laptop with a lot of tools you're comfortable with, just make sure
 
 Assuming you have your Pi setup with internet connection using the wifi dongle in step 1.
 
-You can use this recipes to quickly register your Pi to Bluemix using the ibm iotf utility:
-
-https://developer.ibm.com/recipes/tutorials/raspberry-pi-4/
-
-Or you can follow these steps to do that:
+Follow these steps to register your Raspberry Pi to Bluemix:
 
 Again, make sure you have a Bluemix account (http://bluemix.net/)
 Login to Bluemix using your account credentials
@@ -103,7 +99,7 @@ Close the screen, and now your device is added to the list
 
 ![alt text](./images/iotservice-adddevice3.png "Create iotf service")
 
-Next step is to generate an access token for accessing the service, to send and receive information to/from the device. Click on the Access link, then API Keys and Generate API Key button
+Next step is to generate an access token for accessing the service, to send and receive information to/from the device. Click on the Access link, then API Keys link and Generate API Key button
 
 ![alt text](./images/generate-apikey1.png "Create iotf service")
 
@@ -114,14 +110,14 @@ Remember to record the authentication token displayed for later use since it is 
 
 ### Run your client code
 
-Assuming you've wired things up following the circuit diagram. Login to your Raspberry Pi, then do the following steps to run client component of the project:
+Assuming you've wired things up following the pictures provided. Login to your Raspberry Pi, then do the following steps to run client component of the project:
 
-Create a directory for your the project, lets name it /opt/fau/iotf
+Create a directory for the project, lets name it /opt/fau/iotf
 
 ```
 sudo mkdir -p /opt/fau/iotf
 ```
-Git has been installed by default with your Raspbian so just use it to clone the code to your Pi:
+Git has been installed by default with the Raspbian so just use it to clone the code to your Pi:
 
 ```
 cd /opt/fau/iotf
@@ -168,7 +164,7 @@ You may want to know how to make CloudFoundry(CF) cli work on your environment h
 
 https://www.ng.bluemix.net/docs/starters/install_cli.html
 
-Once you have CF CLI installed on your development environment (not necessarily is your Raspberry Pi but can be different laptop with internet connection and Git installed)
+Once you have CF CLI installed on your development environment (not necessarily is your Raspberry Pi but can be another laptop with internet connection and Git installed)
 
 Make a directory on your machine, and clone the example code. If you're using Mac, here are some example commands:
 
@@ -180,7 +176,7 @@ cd iot
 ```
 Open the server.py file and modify this part to match your setting
 
-Note: You can create Bluemix environment variables and retrieve the values from there too, but lets make it simple by hard-coding the here.
+Note: You can create Bluemix environment variables and retrieve the values from there too, but lets make it simple by hard-coding them here.
 
 ```
 #####################################
