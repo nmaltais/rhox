@@ -29,7 +29,21 @@ Here is the architecture overview of the application:
 
 Below is the detailed diagram as illustrates how to connect the parts together on the breadboard and with the Pi. Make sure you wire things up before jumping to next steps.
 
-![alt text](./images/circuit.jpg "Circuit wire up")
+All things together:
+
+![alt text](./images/wired-all.jpg "Circuit wire up")
+
+Close look at Raspberry pi part:
+
+![alt text](./images/wired-pi.jpg "Circuit wire up")
+
+Close look at breadboard part:
+
+![alt text](./images/wired-breadboard.jpg "Circuit wire up")
+
+Close look at relay part (I'm using 8 channels relay module and channel 8 is for controlling the appliance)
+
+![alt text](./images/wired-relay.jpg "Circuit wire up")
 
 ## Basic steps to setup the environment:
 

@@ -53,7 +53,7 @@ organization = "1eaiiu"
 deviceType = "RaspberryPi"
 deviceId = "RaspberryPi-Lightup"
 authMethod = "token"
-authToken = "y+q@!u9h@YesuGV1iJ"
+authToken = "yourtoken"
 
 # Initialize the device client.
 try:
