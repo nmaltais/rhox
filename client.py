@@ -1,3 +1,8 @@
+#####################################
+# Client component for LightUp IoT project.
+# This will be run on Raspberry Pi and listen to the commands from Server component to control
+# appliances connected to the system (turn on/off)
+####################################
 import time
 import sys
 import pprint
@@ -20,7 +25,6 @@ try:
 except ImportError:
 	# This part is only required to run the sample from within the samples
 	# directory when the module itself is not installed.
-	#
 	# If you have the module installed, just use "import ibmiotf.application" & "import ibmiotf.device"
 	import os
 	import inspect
@@ -30,7 +34,6 @@ except ImportError:
 	import ibmiotf.application
 	import ibmiotf.device
 
-
 def myAppEventCallback(event):
 	print("Received live data from %s (%s) sent at %s: hello=%s x=%s" % (event.deviceId, event.deviceType, event.timestamp.strftime("%H:%M:%S"), data['hello'], data['x']))
 
@@ -39,21 +42,18 @@ def myCommandCallback(cmd):
   if cmd.command == "on":
     print("Turning Light ON")
     GPIO.output(3,1)
-
   elif cmd.command == "off":
     print("Turning Light OFF")
     GPIO.output(3,0)
-
 print
-#####################################
-#FILL IN THESE DETAILS
-#####################################
+######################################################
+#Update this section to match your environment setting
+######################################################
 organization = "1qdfa9"
-deviceType = "raspberrypi"
-deviceId = "b827eb1c3619"
-appId = str(uuid.uuid4())
+deviceType = "RaspberryPi"
+deviceId = "RaspberryPi-Lightup"
 authMethod = "token"
-authToken = "4kUN-)g0WI?0S+WgkM"
+authToken = "y+q@!u9h@YesuGV1iJ"
 
 # Initialize the device client.
 try:
@@ -63,10 +63,9 @@ except Exception as e:
 	print(str(e))
 	sys.exit()
 
-# Connect and send a datapoint "hello" with value "world" into the cloud as an event of type "greeting" 10 times
 deviceCli.connect()
 deviceCli.commandCallback = myCommandCallback
-#x=0
+
 try:
         while(1):
                 lightStatus=GPIO.input(7)
@@ -77,11 +76,10 @@ try:
                 intruder=GPIO.input(11)
                 data = { 'LightStatus': ls, 'Intruder': intruder}
                 deviceCli.publishEvent(deviceType, deviceId, "status","json", data)
-                #x=x+1
+
                 time.sleep(1)
 except KeyboardInterrupt:
         print "Cleaning up ..."
-        #GPIO.cleanup()
+        GPIO.cleanup()
 # Disconnect the device and application from the cloud
 deviceCli.disconnect()
-#appCli.disconnect()

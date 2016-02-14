@@ -1,3 +1,8 @@
+#####################################
+# Server component for LightUp IoT project.
+# This will be run in Bluemix and send controlling commands to Client component
+# to control the appliances connected to the system (turn on/off)
+####################################
 import time
 import sys
 import os,json
@@ -38,14 +43,13 @@ def myStatusCallback(status):
 #####################################
 #FILL IN THESE DETAILS
 #####################################
-organization = "1qdfa9"
-deviceType = "raspberrypi"
-deviceId = "b827eb1c3619"
-appId = str(uuid.uuid4())
-
+organization = "1eaiiu"
+deviceType = "RaspberryPi"
+deviceId = "RaspberryPi-Lightup"
+#appId = str(uuid.uuid4())
 ##API TOKEN AND KEY
-authkey = "a-1qdfa9-qauu2byt5q"
-authtoken = "E?cLpBcYJ3pTfKbx?+"
+#authkey = "a-1qdfa9-qauu2byt5q"
+#authtoken = "E?cLpBcYJ3pTfKbx?+"
 # Initialize the application client.
 appOptions = {
 	"org": vcap["iotf-service"][0]["credentials"]["org"],
