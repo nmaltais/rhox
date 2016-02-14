@@ -1,5 +1,5 @@
 applications:
-- name: fau-hackathon
+- name: fau-lightup
   memory: 128M
   services:
-   - fau-iot
+   - lightup

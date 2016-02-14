@@ -134,13 +134,108 @@ sudo pip install ibmiotf
 Now run the app:
 
 ```
-python client.py
+sudo python client.py
 ```
+If it's successfully started, you could see something similar to this:
+
+```
+2016-02-13 22:51:50,150   ibmiotf.device.Client      INFO    Connected successfully: d:1eaiiu:RaspberryPi:RaspberryPi-Lightup
+```
+
+Now your Client side is connected to IBM IOTF on Bluemix and waiting for commands from Server side component.
 
 4. Deploy your server code to Bluemix
 
-Make sure you have a Bluemix ID upfront.
+You must have a Bluemix account already. We will use command line interface (CLI) to deploy our application (Server component) to Bluemix.
+
+You may want to know how to make CloudFoundry(CF) cli work on your environment here:
+
+https://www.ng.bluemix.net/docs/starters/install_cli.html
+
+Once you have CF CLI installed on your development environment (not necessarily is your Raspberry Pi but can be different laptop with internet connection and Git installed)
+
+Make a directory on your machine, and clone the example code. If you're using Mac, here are some example commands:
+
+```
+mkdir -p /opt/fau/iotf
+cd /opt/fau/iotf
+git clone https://github.com/dnguyenv/iot.git
+cd iot
+```
+Open the server.py file and modify this part to match your setting
+
+Note: You can create Bluemix environment variables and retrieve the values from there too, but lets make it simple by hard-coding the here.
+
+```
+#####################################
+#Change this setting based on your specific setup
+#####################################
+organization = ""
+deviceType = ""
+deviceId = ""
+```
+
+Modify manifest.yml to match your Internet of Things Foundation service setting you did before. Also, remember to change the application name to be something unique. The application name will be used to access your application later. For example in this case, the URL to your application on the Internet by default will be:
+
+http://fau-lightup.mybluemix.net
+
+```
+applications:
+- name: fau-lightup
+  memory: 128M
+  services:
+   - lightup
+```
+Make sure you're in the directory where the manifest.yml is located, login to Bluemix using your Bluemix ID credentials and do a push to Bluemix using CF CLI
+
+```
+cf login -a https://api.ng.bluemix.net
+API endpoint: https://api.ng.bluemix.net
+Email> dnguyenv@us.ibm.com
+Password>
+Authenticating...
+OK
+Targeted org duynguyen
+
+Select a space (or press enter to skip):
+1. dev
+2. stage
+
+Space> 1
+Targeted space dev
+
+API endpoint:   https://api.ng.bluemix.net (API version: 2.40.0)   
+User:           dnguyenv@us.ibm.com   
+Org:            duynguyen   
+Space:          dev
+
+cf push
+```
+
+Wait for a minute and if your application deployed successfully, you then see something similar to this indicating the application is running:
+
+```
+App fau-lightup was started using this command `python server.py`
+
+Showing health and status for app fau-lightup in org duynguyen / space dev as dnguyenv@us.ibm.com...
+OK
+
+requested state: started
+instances: 1/1
+usage: 128M x 1 instances
+urls: fau-lightup.mybluemix.net
+last uploaded: Sun Feb 14 05:21:59 UTC 2016
+stack: cflinuxfs2
+buildpack: python 1.5.1
+```
+
 5. Try it out
+
+Use your smartphone which has internet connection, to access to
+
+http://fau-lightup.mybluemix.net
+
+You now can send commands from your phone to turn on/off any device connected to the client side of the system.
 
 More instructions about how to work with Python iotf library can be found here:
 https://docs.internetofthings.ibmcloud.com/libraries/python.html

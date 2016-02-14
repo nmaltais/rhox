@@ -41,7 +41,7 @@ def myStatusCallback(status):
 	else:
 		print(tableRowTemplate % (status.time.isoformat(), status.device, status.action + " " + status.clientAddr))
 #####################################
-#FILL IN THESE DETAILS
+#Change this setting based on your specific setup
 #####################################
 organization = "1eaiiu"
 deviceType = "RaspberryPi"
