@@ -253,7 +253,7 @@ You now can send commands from your phone to turn on/off any device connected to
 
 =>
 
-![alt text](./images/run1.png "Running app")
+![alt text](./images/run1.jpg "Running app")
 
 More instructions about how to work with Python iotf library can be found here:
 https://docs.internetofthings.ibmcloud.com/libraries/python.html
