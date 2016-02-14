@@ -7,7 +7,8 @@ Here is the architecture overview of the application:
 
 # Stuffs needed for building project
 ## Hardware:
-1. Raspberry Pi 2 / B+.
+
+1. Raspberry Pi (I'm using 2B and Zero)
 2. USB wifi dongle
 3. USB keyboard and mouse.
 4. HDMI monitor and cable.
@@ -16,7 +17,7 @@ Here is the architecture overview of the application:
 7. Male-female and male-male jumpers.
 8. Breadboard.
 9. BC547 transistor.
-10. 5V SPDT relay and 1n4001 diode.
+10. Songle SRD-05VDC-SL-C relay and 1n4001 diode.
 11. LED and 220Ohm resistor.
 
 ## Software:
@@ -41,7 +42,7 @@ You need a monitor and a keyboard for the first time installation. Make sure you
 
 Once you have your Pi setup, you can either use the separate keyboard and monitor to interact with you Pi, or through another machine, like your laptop which is a common way developers use.
 
-If you have a laptop with a lot of tools you're comfortable with, just make sure your Pi and your laptop can connect together(eg: on same network) then you can access and work with your Pi using your laptop through ssh or VNC viewer.
+If you have a laptop with a lot of tools you're comfortable with, just make sure your Pi and your laptop can connect together(eg: on same network) then you know your Pi ip address and can access and work with your Pi using your laptop through ssh or VNC viewer.
 
 2. Register your Pi to Bluemix
 
