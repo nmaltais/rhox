@@ -75,7 +75,7 @@ try:
                         ls='OFF'
                 intruder=GPIO.input(11)
                 data = { 'LightStatus': ls, 'Intruder': intruder}
-                deviceCli.publishEvent(deviceType, deviceId, "status","json", data)
+                deviceCli.publishEvent("status","json", data)
 
                 time.sleep(1)
 except KeyboardInterrupt:
