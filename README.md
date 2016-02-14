@@ -249,11 +249,7 @@ http://fau-lightup.mybluemix.net
 
 You now can send commands from your phone to turn on/off any device connected to the client side of the system.
 
-![alt text](./images/run.png "Running app")
-
-=>
-
-![alt text](./images/run1.jpg "Running app")
+![alt text](./images/run.png "Running app")![alt text](./images/run1.jpg "Running app")
 
 More instructions about how to work with Python iotf library can be found here:
 https://docs.internetofthings.ibmcloud.com/libraries/python.html
