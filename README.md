@@ -1,4 +1,8 @@
 # IBM FAU Hackathon
+
+This code is extension from this post:
+http://diyhacking.com/raspberry-pi-home-automation-ibm-bluemix/
+
 This is an IoT project named LightUp aiming to introduce to FAU Hackathon event an example as for how to build an IoT application using.
 The resulting application is a small mobile web page that allows the user to turn-on and turn-off an electronic device from anywhere using his smartphone.
 Here is the architecture overview of the application:
@@ -252,4 +256,4 @@ You now can send commands from your phone to turn on/off any device connected to
 ![alt text](./images/run.png "Running app")![alt text](./images/run1.jpg "Running app")
 
 More instructions about how to work with Python iotf library can be found here:
-https://docs.internetofthings.ibmcloud.com/libraries/python.html
+https://docs.internetofthings.ibmcloud.com/
