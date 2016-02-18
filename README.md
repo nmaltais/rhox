@@ -1,8 +1,5 @@
 # IBM FAU Hackathon
 
-This code is extension from this post:
-http://diyhacking.com/raspberry-pi-home-automation-ibm-bluemix/
-
 This is an IoT project named LightUp aiming to introduce to FAU Hackathon event an example as for how to build an IoT application using.
 The resulting application is a small mobile web page that allows the user to turn-on and turn-off an electronic device from anywhere using his smartphone.
 Here is the architecture overview of the application:
@@ -48,6 +45,10 @@ Close look at breadboard part:
 Close look at relay part (I'm using 8 channels relay module and channel 8 is for controlling the appliance). You can connect any device to the power outlet strip to try, eg: a lamp, fan, etc. Remember, this power outlet is connected to your wall with high voltage so be careful.
 
 ![alt text](./images/wired-relay.jpg "Circuit wire up")
+
+If you want to see detail circuit diagram, please refer to this post where I inherited from for hardware part. 
+
+http://diyhacking.com/raspberry-pi-home-automation-ibm-bluemix/
 
 ## Basic steps to setup the environment:
 
