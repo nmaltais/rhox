@@ -43,9 +43,9 @@ def myStatusCallback(status):
 #####################################
 #Change this setting based on your specific setup
 #####################################
-organization = "1eaiiu"
-deviceType = "RaspberryPi"
-deviceId = "RaspberryPi-Lightup"
+organization = "5pwf9g"
+deviceType = "RaspberryPI"
+deviceId = "b827eba899c8"
 #appId = str(uuid.uuid4())
 ##API TOKEN AND KEY
 #authkey = "a-1qdfa9-qauu2byt5q"

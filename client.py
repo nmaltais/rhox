@@ -49,11 +49,11 @@ print
 ######################################################
 #Update this section to match your environment setting
 ######################################################
-organization = "1eaiiu"
-deviceType = "RaspberryPi"
-deviceId = "RaspberryPi-Lightup"
+organization = "5pwf9g"
+deviceType = "RaspberryPI"
+deviceId = "bh27eba899c8"
 authMethod = "token"
-authToken = "y+q@!u9h@YesuGV1iJ"
+authToken = "N@MUTZ0LgoO4fVEB6j"
 
 # Initialize the device client.
 try:
